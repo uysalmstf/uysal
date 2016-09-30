@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Mustafa UYSAL</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--sweet alert-->
+    <!--sweet alert-->
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84592759-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <style>
+        button.accordion {
+            background-color: #49bf9d;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        button.accordion:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #eee;
+            float: right;
+            margin-left: 5px;
+        }
+
+        button.accordion.active:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+            color: #eee;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #ddd;
+
+        }
+
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+        }
+
+        div.panel.show {
+            display: block;
+        }
+    </style>
+</head>
+<body id="top">
+
+<!-- Header -->
+<header id="header">
+    <img src="images/20160306_143657.jpg" class="image avatar" alt=""/>
+    <h1><strong>Mustafa UYSAL</strong><br/>
+        <p>Bilgisayar Mühendisliği Öğrencisi</p>
+    </h1>
+</header>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- One -->
+    <section id="one">
+        <header class="major">
+            <h2>Bu ilk yazım...</h2></header></br>
+            <p>asdfasdf</p>
+            <a href="index3.html" style="float: right">daha fazlası için tıklayınız....</a>
+        </header>
+    </section>
+
+
+
+
+</div>
+
+
+<!-- Three -->
+
+
+<!-- Footer -->
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://www.facebook.com/uysalmstf" class="icon fa-facebook"><span class="label"></span></a></li>
+        <li><a href="https://tr.linkedin.com/in/mustafa-uysal-63bb2145" class="icon fa-linkedin"><span
+                class="label"></span></a></li>
+        <li><a href="https://www.instagram.com/uyslmstf/" class="icon fa-instagram"><span class="label"></span></a></li>
+
+    </ul>
+    <ul class="copyright">
+        <li>&copy; Mustafa UYSAL</li>
+    </ul>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function () {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
+</script>
+<!--mail yollama-->
+<script>
+    $(document).ready(function () {
+        $('#iletisim').submit(function () {
+            $.ajax({
+                type: 'POST',
+                url: 'gonder.php',
+                data: $('#iletisim').serialize(),
+                success: function (data) {
+                    if (data == 1) {
+
+                        swal({title: "Hata!", text: "Lütfen Mail Adresinizi Giriniz!!!", type: "error"});
+
+                    } else if (data == 2) {
+
+                        swal({title: "Hata!", text: "Lütfen Adınızı ve Soyadınızı Giriniz!!!", type: "error"});
+
+
+                    }
+                    else if (data == 3) {
+
+                        swal({title: "Hata!", text: "Lütfen Mesajınızı Giriniz!!!", type: "error"});
+
+                    }
+                    else {
+
+                        swal({
+                            title: "Başarılı!",
+                            text: "Sayın " + data + " Mesajınız Başarıyla Gönderilmiştir!!!",
+                            type: "error"
+                        });
+
+                    }
+                },
+                error: function () {
+                    swal({title: "Hata!", text: "Mesaj Gönderilemedi!!!", type: "error"});
+                }
+            });
+            return false;
+        })
+    });
+</script>
+</body>
+</html>

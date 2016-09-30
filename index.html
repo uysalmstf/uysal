@@ -1,0 +1,327 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Mustafa UYSAL</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--sweet alert-->
+    <!--sweet alert-->
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84592759-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <style>
+        button.accordion {
+            background-color: #49bf9d;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        button.accordion:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #eee;
+            float: right;
+            margin-left: 5px;
+        }
+
+        button.accordion.active:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+            color: #eee;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #ddd;
+
+        }
+
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+        }
+
+        div.panel.show {
+            display: block;
+        }
+    </style>
+</head>
+<body id="top">
+
+<!-- Header -->
+<header id="header">
+    <img src="images/20160306_143657.jpg" class="image avatar" alt=""/>
+    <h1><strong>Mustafa UYSAL</strong><br/>
+        <p>Bilgisayar Mühendisliği Öğrencisi</p>
+    </h1>
+</header>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- One -->
+    <section id="one">
+        <header class="major">
+            <h2>Hakkımda</h2>
+        </header>
+        <p>1991 yılının Ocak ayında Manisa ili Akhisar İlçesi
+            Süleymanlı Köyü'nde dünyaya geldim. İlk ve orta öğretimimi
+            aynı köyde tamamladıktan sonra Manisa ili Salihli ilçesindeki
+            Salihli Sekine Evren Anadolu Lisesi'ne başladım. Fen Bilimleri
+            bölümünden mezun olduktan sonra Karabük Üniversitesi
+            Bilgisayar Mühendisliği'ne yerleştim. Halen eğitimime orada
+            devam etmekteyim.</p>
+    </section>
+
+    <!-- Two -->
+    <section id="two">
+        <h2>Yeteneklerim</h2>
+        <div class="row">
+            <article class="6u 12u$(xsmall) work-item">
+                <div class="yazi" style="float:left;  margin-right:10px;"><span><b>HTML/CSS</b></span></div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                         aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                    </div>
+                </div>
+            </article>
+            <article class="6u$ 12u$(xsmall) work-item">
+                <div class="yazi" style="float:left;  margin-right:10px;"><span><b>PHP</b></span></div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                         aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                    </div>
+                </div>
+            </article>
+            <article class="6u 12u$(xsmall) work-item">
+                <div class="yazi" style="float:left;  margin-right:10px;"><span><b>MYSQL</b></span></div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                    </div>
+                </div>
+            </article>
+            <article class="6u$ 12u$(xsmall) work-item">
+                <div class="yazi" style="float:left;  margin-right:10px;"><span><b>JAVA</b></span></div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                    </div>
+                </div>
+            </article>
+            <article class="6u 12u$(xsmall) work-item">
+                <div class="yazi" style="float:left;  margin-right:10px;"><span><b>ASP.NET</b></span></div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                         aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                    </div>
+                </div>
+            </article>
+            <article class="6u$ 12u$(xsmall) work-item">
+                <div class="yazi" style="float:left;  margin-right:10px;"><span><b>ANDROID</b></span></div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                         aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </section>
+
+    <!-- Three -->
+    <section id="three">
+        <h2>Tecrübelerim</h2>
+
+        <div class="row">
+            <div class="10u 12u$(small)">
+
+                <button class="accordion" style="margin-bottom:5px;">Türk Telekom(Staj)</button>
+                <div class="panel">
+                    <p>
+                        <b>Görev Yeri:</b> Akhisar/Manisa</br>
+                        <b>Görevi:</b>İnternet ve telefon arızalarının tespiti ve arıza ekipleri ile iletişim
+                        kurulmasında görev aldım.
+                    </p>
+                </div>
+                <button class="accordion">Karabük Üniversitesi Bilgi İşlem Daire Başkanlığı(Staj)</button>
+                <div class="panel">
+                    <p><b>Görev Yeri:</b> Karabük</br>
+                        <b>Görevi:</b>
+                    <ul>
+                        <li>Üniversitenin web yazılımlarının test edilmesi ve hata tespiti</li>
+                        <li>ASP.NET Razor MVC tabanlı geliştirilmiş admin panelinin kontrolü ve tasarımı</li>
+                    </ul>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!--FOUR-->
+    <section id="four">
+        <h2>İletişim</h2>
+        <p>İletişime geçmek için lütfen aşağıdaki alanları doldurunuz.</p>
+        <div class="row">
+            <div class="6u 12u$(small)">
+                <form method="post" action="gonder.php" id="iletisim" name="iletisim">
+                    <div class="row uniform 50%">
+                        <div class="6u 12u$(xsmall)"><input class="inputum" type="text" name="name" id="name"
+                                                            placeholder="Adınız Soyadınız"/></div>
+                        <div class="6u$ 12u$(xsmall)"><input class="inputum" type="email" name="email" id="email"
+                                                             placeholder="Email adresiniz"/></div>
+                        <div class="12u$"><textarea class="inputum" name="message" id="message" placeholder="Mesajınız"
+                                                      rows="4"></textarea></div>
+                    </div>
+                    </br>
+
+                    <ul class="actions">
+                        <li><input type="submit" value="Mesaj Gönder" class="special"/></li>
+                        <li><input type="reset" value="Temizle"/></li>
+                    </ul>
+                </form>
+            </div>
+            <div class="6u$ 12u$(small)">
+                <ul class="labeled-icons">
+                    <li>
+                        <h3 class="icon fa-home"><span class="label">Adres</span></h3>
+
+                        Akhisar, MANİSA<br/>
+                        TÜRKİYE
+                    </li>
+                    <li>
+                        <h3 class="icon fa-mobile"><span class="label">Telefon</span></h3></br>
+                        +90(506) 7598951
+                    </li>
+                    <li>
+                        <h3 class="icon fa-envelope-o"><span class="label">Mail</span></h3></br>
+                        <a href="mailto:mustafa-uysal@outlook.com">mustafa-uysal@outlook.com</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+
+</div>
+
+</div>
+
+<!-- Three -->
+
+
+</div>
+
+
+<!-- Footer -->
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://www.facebook.com/uysalmstf" class="icon fa-facebook"><span class="label"></span></a></li>
+        <li><a href="https://tr.linkedin.com/in/mustafa-uysal-63bb2145" class="icon fa-linkedin"><span
+                class="label"></span></a></li>
+        <li><a href="https://www.instagram.com/uyslmstf/" class="icon fa-instagram"><span class="label"></span></a></li>
+
+    </ul>
+    <ul class="copyright">
+        <li>&copy; Mustafa UYSAL</li>
+    </ul>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function () {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
+</script>
+<!--mail yollama-->
+<script>
+    $(document).ready(function () {
+        $('#iletisim').submit(function () {
+            $.ajax({
+                type: 'POST',
+                url: 'gonder.php',
+                data: $('#iletisim').serialize(),
+                success: function (data) {
+                    if (data == 1) {
+
+                        swal({title: "Hata!", text: "Lütfen Mail Adresinizi Giriniz!!!", type: "error"});
+
+                    } else if (data == 2) {
+
+                        swal({title: "Hata!", text: "Lütfen Adınızı ve Soyadınızı Giriniz!!!", type: "error"});
+
+
+                    }
+                    else if (data == 3) {
+
+                        swal({title: "Hata!", text: "Lütfen Mesajınızı Giriniz!!!", type: "error"});
+
+                    }
+                    else {
+
+                        $(".inputum").val("");
+                        swal({
+                            title: "Başarılı!",
+                            text: "Sayın " + data + " Mesajınız Başarıyla Gönderilmiştir!!!",
+                            type: "success"
+                        });
+
+                    }
+                },
+                error: function () {
+                    swal({title: "Hata!", text: "Mesaj Gönderilemedi!!!", type: "error"});
+                }
+            });
+            return false;
+        })
+    });
+</script>
+</body>
+</html>
